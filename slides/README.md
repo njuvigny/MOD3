@@ -1,8 +1,6 @@
 Slides  of the different lectures
 
-Lecture 1: 5/11/20
-
-
+Lecture 1: 5/11/20\
 Introduction to LaTeX
   
 Lecture 2: 12/11/20
