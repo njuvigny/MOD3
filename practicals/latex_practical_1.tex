@@ -1,0 +1,76 @@
+% First things first is to make sure you have downloaded and installed LaTeX from: https://www.latex-project.org/get/
+
+
+% create a folder where to save all of your LaTeX files then do File -> save -> "your folder"/"your file name".
+% save the document as a TeX file UTF 8 unicode
+
+% the default spellchecking usually does not work with LaTeX commands therefore your need to install a LaTeX friendly spellchecker
+% such as Aspell and select it in TeXShop; Edit -> "Show spelling and grammar" -> select "your language (Aspell).
+
+% your first need to define the type of document that you are writing. Every LaTeX document start witht the same workflow.
+
+
+% in our case we take the example of a manuscript article but many other types exist.
+
+\documentclass[11pt, a4paper]{article}
+
+% this is a command line. It starts with a name, i.e. "\documentclass" followed by the required argument betweek curly brackets {  }
+% we can also add optional argument within normal brackets [ ] between the name and required argument. Optional argument can be
+% removed of course. 
+
+% \name[optional argument]{required argument}
+
+% at this stage we can define all the characteristics of the document that we want such as the font size, font type, margins etc...
+
+% we then can define the title of the document as well as the date and authors etc...
+
+\title{My introduction to LaTeX}
+\author{My name}
+\date{Today's date}
+
+% the next step in the preparation of the document is to load all the packages that we will be using to add fucntionality with the
+% " \usepackage" command
+% an easy way to manage your packages is via TeX live utility which comes with the instalation of the LaTeX suite from https://www.latex-project.org/get/
+
+% currently for Mac users on Catalina, TeX live utility has not been notarised (the same goes with Bibdesk) and therefore you need to manually add it. Instructions are given in the readme document "missing packages" in your LaTeX application folder.
+
+% first we can load a package to specify we want an English hyphenation.
+
+\usepackage[english]{babel}
+
+% we can then add a package to choose the font that we want. Here we set to Helvetica but other font package exists.
+
+\usepackage{helvet}
+
+% we then add a package to improve the justification of the text document wide.
+
+\usepackage{microtype}
+
+% a package to add figures to the text
+
+\usepackage {graphicx}
+\graphicspath{ {images/} }
+
+% we use this package to chose the encoding of the file; utf8 is recommended.
+\usepackage[utf8]{inputenc}
+
+% all the different steps made to define the attribute of our document is what we call the "preamble"
+% Now that we have added all the package we want we are ready to add our text in what is called the "body"
+
+\begin{document} % command line to open the document
+\maketitle % this command is to print the titles and other attribute we set up
+
+We have now created our first little LaTeX document.
+
+\end{document} % command line to close the document
+
+%run typeset two times and see your document appear before your eyes!
+
+% Now we will take this template and improve it to add new features. You can find the edits in the next practical file.
+
+
+
+
+
+
+
