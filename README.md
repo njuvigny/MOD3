@@ -1,7 +1,10 @@
 # MOD3
 GitHub for the MOD3 module (Advanced data analysis) of the university of Koblenz-Landau
 
-Learning content:<br/>
+Please make sure to read the README files for each sub-folders.
+
+Learning content:
+
 a) Data Science Tools:<br/>
 ● Overview of software tools for data science<br/>
 ● Version control and joint software development using github<br/>
