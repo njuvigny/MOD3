@@ -1,0 +1,117 @@
+---
+title: "Introduction to Git & GitHub"
+subtitle: "Terminal, RStudio"
+author: "Abdreas Scharmüller, Ralf B. Schäfer"
+institute: "AG Landscape Ecology"
+date: "2016/12/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+editor_options: 
+  chunk_output_type: console
+---
+
+## Create a GitHub account
+
+- modern software development
+- Git is software
+- GitHub is platform
+
+#### Other Plattforms
+- GitLab
+- BitBucket
+
+---
+## Fork a repository
+
+- Fork from someone to your GtiHub account
+
+![github1](figures/github1_fork.png)
+
+---
+## Clone a repository
+
+- Clone __your__ fork (i.e. version) to your local machine
+
+![github2](figures/github2_clone.png)
+---
+## Clone a repository
+
+`cd Projects`
+
+`git clone git@github.com:njuvigny/MOD3.git`
+
+![github3](figures/github3_clone.png)
+
+---
+## Local changes
+
+- Make changes to the `.txt`, `.R`, `.python` or to whatever file
+
+
+![github4](figures/github4_local_cahnges.gif){#id .class height=3px}
+---
+## Stage your changes
+
+`git add file.txt`
+
+`git add -A`
+
+![github5](figures/github5_stage_changes.png)
+---
+## Commit changes
+
+`git commit -m 'message here'`
+
+![github6](figures/github6_commit_changes.png)
+---
+## Push to your repo (origin)
+
+`git push origin master`
+
+`git push origin main`
+
+![github7](figures/github7_push.png)
+
+---
+## Switch branch
+
+`git checkout -b dev_scharmueller`
+
+`git chekcout main`
+
+![github8](figures/github8_branch.png)
+
+---
+## Pull-Request to original repo (remote)
+
+![github9](figures/github9_pr.png)
+
+---
+## Task
+
+- Fork Noel's repo
+- Clone it to local machine
+- Create a new branch named dev_YOURSURNAME
+- Change the file XXX
+- Commit the change (+ commit message) (in the new branch!)
+- Push local changes to your repo
+- Create a Pull Request against Noel's repo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
