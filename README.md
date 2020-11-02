@@ -1,7 +1,7 @@
 # MOD3
 Welcome to the repository for the MOD3 module (Advanced data analysis) of the MSc Environmental Sciences/Ecotoxicology at the University of Koblenz-Landau!
 
-**BEFORE COMING TO THE CLASS MAKE SURE YOU HAVE DOWNLOADED ALL THE NECESSARY MATERIAL BY CHECKING THE TO-DOWNLOAD FILE**
+**BEFORE COMING TO THE CLASS MAKE SURE YOU HAVE DOWNLOADED ALL THE NECESSARY MATERIAL IN THE TO-DOWNLOAD FILE**
 
 Please make sure to read the README files for each sub-folder.
 
