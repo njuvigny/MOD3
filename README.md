@@ -16,7 +16,7 @@ a) Data Science Tools:<br/>
 ● Scraping data from the internet<br/>
 ● Relational databases for spatial and non-spatial databases (PostgreSQL, PostGIS)<br/>
 ● Parallel computing and working with servers<br/>
-● Specific approaches of data analysis: Bayesian statistics, Generalized and linear mixed models, Artificial neural networks and Deep learning, Non-linearity and GAMs, Advanced tools for 74 multivariate analysis<br/>
+● Specific approaches of data analysis: Bayesian statistics, Generalized and linear mixed models, Artificial neural networks and Deep learning, Non-linearity and GAMs, Advanced tools for multivariate analysis<br/>
 
 b) Basic and advanced reading:<br/>
 Gandrud C. (2014) Reproducible research with R and R Studio. CRC Press/Taylor & Francis Group, Boca Raton.<br/> 
