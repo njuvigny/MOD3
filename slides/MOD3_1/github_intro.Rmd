@@ -1,9 +1,9 @@
 ---
 title: "Introduction to Git & GitHub"
 subtitle: "Terminal, RStudio"
-author: "Abdreas Scharmüller, Ralf B. Schäfer"
+author: "Andreas Scharmüller, Prof. Ralf B. Schäfer"
 institute: "AG Landscape Ecology"
-date: "2016/12/12 (updated: `r Sys.Date()`)"
+date: "2020/10/29 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -15,20 +15,52 @@ editor_options:
   chunk_output_type: console
 ---
 
-## Create a GitHub account
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
 
-- modern software development
-- Git is software
-- GitHub is platform
+## Why Git?
+
+.pull-left[
+
+- Modern software development
+  - most R-packages
+- Version control
+- Git is the __software__
+- GitHub is the __platform__
+]
+
+.pull-right[
+
+<img src="figures/git_hub.jpeg" style="background-image">
+]
 
 #### Other Plattforms
-- GitLab
-- BitBucket
+- GitLab: <https://about.gitlab.com>
+- BitBucket: <https://bitbucket.org>
+
+---
+## Create a GitHub account
+
+<img src="figures/github_account.png" style="width: 70%">
+
+---
+## Create (initialize) repository
+
+#### Locally
+
+```sh
+git init
+```
+
+#### Remote
+
+<img src="figures/github0_repo.png" style="width: 80%">
 
 ---
 ## Fork a repository
 
-- Fork from someone to your GtiHub account
+- Fork someone's repo to your GitHub account
 
 ![github1](figures/github1_fork.png)
 
@@ -41,9 +73,10 @@ editor_options:
 ---
 ## Clone a repository
 
-`cd Projects`
-
-`git clone git@github.com:njuvigny/MOD3.git`
+```sh
+cd Projects
+git clone git@github.com:njuvigny/MOD3.git
+```
 
 ![github3](figures/github3_clone.png)
 
@@ -52,49 +85,98 @@ editor_options:
 
 - Make changes to the `.txt`, `.R`, `.python` or to whatever file
 
+<img src="figures/github4_local_cahnges.gif" style="width:60%;">
 
-![github4](figures/github4_local_cahnges.gif){#id .class height=3px}
 ---
 ## Stage your changes
 
-`git add file.txt`
-
-`git add -A`
-
+```sh
+git add file.txt
+git add *.txt
+git add -A
+```
 ![github5](figures/github5_stage_changes.png)
 ---
 ## Commit changes
 
-`git commit -m 'message here'`
+```sh
+git commit -m 'test'
+```
 
 ![github6](figures/github6_commit_changes.png)
 ---
 ## Push to your repo (origin)
 
-`git push origin master`
-
-`git push origin main`
+```sh
+git push origin master
+git push origin main
+```
 
 ![github7](figures/github7_push.png)
+---
+## Pull Request
+
+#### From your main branch to the remote main branch
+
+![github9](figures/github9_pr_master.png)
 
 ---
-## Switch branch
+class: center, inverse, middle
+# Branches
 
-`git checkout -b dev_scharmueller`
+<img src="figures/git_branch.jpg" style="width:40%;">
 
-`git chekcout main`
+
+---
+## Branch
+
+#### Create/Switch Branch
+
+```sh
+git checkout -b dev_scharmueller
+git checkout main
+git status
+git branch
+```
 
 ![github8](figures/github8_branch.png)
 
 ---
-## Pull-Request to original repo (remote)
+## Branch
 
-![github9](figures/github9_pr.png)
+#### Merge Branch
+
+```sh
+git checkout master
+git merge dev_scharmueller
+```
+
+---
+## Pull Request
+
+#### From your dev_XXX branch to a new remote dev_XXX branch
+
+![github9](figures/github9_pr_dev.png)
+---
+## Branch
+
+First 8 commits of my R-package repo <andschar/dbreport>
+
+```sh
+git log --all --decorate --oneline --graph
+```
+
+<img src="figures/github9_adog.png" style="width:100%;">
+
+---
+class: center, inverse, middle
+
+<img src="figures/git_simply.jpeg">
 
 ---
 ## Task
 
-- Fork Noel's repo
+- Fork Noel's repo: <https://github.com/njuvigny/MOD3>
 - Clone it to local machine
 - Create a new branch named dev_YOURSURNAME
 - Change the file XXX
@@ -102,16 +184,27 @@ editor_options:
 - Push local changes to your repo
 - Create a Pull Request against Noel's repo
 
+---
+## Material
 
+- OpenOlat
+- StackOverflow
+- YouTube
+- <https://guides.github.com/activities/hello-world>
+- <https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN>
 
+### Made with
+- <https://github.com/rstudio/rmarkdown>
+- <https://github.com/yihui/knitr>
+- <https://github.com/yihui/xaringan>
 
+---
+## Other things
 
+- <https://github.com/rstudio/blogdown>
+- <https://github.com/r-lib/pkgdown>
 
+---
+class: center, middle, inverse
 
-
-
-
-
-
-
-
+# Thank you for your attention!
