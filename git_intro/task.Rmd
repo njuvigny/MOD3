@@ -1,0 +1,31 @@
+---
+title: "Task"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+## YAML header
+
+1. Add your full name and date to the RMarkdown document in the YAML header
+
+## Plot
+
+2. Here, add a scatter plot of the iris data set depicting Sepal.Length and Sepal.Width
+variables and print the figure and the code snippet.
+
+## Image
+
+3. Here, add the file git_intro/markdown_meme.jpg to the document
+
+HINT: If this wasn't covered in the course, just google it ;)
+
+## Formula
+
+4. Here, add a formula which calculates the Toxic Unit of a concentration (c) and and
+LC50 value.
+
+## Other
+
+5. Add a table of contents to the document.
+6. Add a link pointing to the university Landau's website here.

@@ -1,0 +1,198 @@
+---
+title: Example Script
+editor_options:
+  chunk_output_type: console
+output:
+  html_document:
+    fig_caption: yes
+    figure_caption: yes
+    highlight: tango
+    number_sections: yes
+    toc: yes
+    toc_depth: '3'
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Headline without Number {-} 
+the number is not displayed due to the use of {-}
+
+# Headline 1
+## Headline 2 {#name_test}
+### Headline 3
+#### Headline 4
+##### Headline 5
+Here you can see that headlines 4 + 5 is not displayed in the TOC above. This is based on "toc_depth: '3'" what we wrote in the Markdown YAML header  
+
+The different headers can also get names (see Headline 2 in the Markdown)  
+These can be used to enter jumps to the respective [headline](#name_test)
+
+When writing text, you can create a new line  
+by adding two spaces at the end.  
+
+Without two spaces everything will 
+be in one line.
+
+# create unordered lists
+
+* list 1 - item 1
+* list 1 - item 2
+  + list 1 - item 2.1
+  + list 1 - item 2.2
+    - list 1 - item 2.2.1
+    
+For each level you have to enter an additional tab
+
+# create ordered lists
+
+1. list 2 - item 1
+2. list 2 - item 2
+   1. list 2 - item 2.1
+   b. list 2 - item 2.2
+      5. list 2 - item 2.2.1
+
+Here, to have a second level you need to enter a tab and a space, for level 3 you need to enter two tabs and two spaces
+
+# enter text in different formats
+
+## italics
+section needs to be frames by single ' * ' or ' _ '  
+either *italics* or _italics_
+
+## bold
+section needs to be frames by double ' * ' or ' _ *  
+either **bold** or __bold__
+
+## subscript
+section needs be framed by  ' ~ '  
+e.g. H~2~O
+
+## superscript
+section needs to be framed by ' ^ '  
+e.g. H^+^
+
+combined example:
+NH~4~^+^
+
+
+# create Tables
+
+
+First column | Second column
+-|-
+First row | First row
+Second row | Second row
+
+# Enter Links
+
+you can enter links by either adding the link in ' < > ' or setting the hyperlinkable word in square brackets and the link in round brackets (without space in between)   
+examples:
+<https://www.uni-koblenz-landau.de>  
+[Uni](https://www.uni-koblenz-landau.de)
+
+
+# enter in-line R code
+to enter in-line R code you have to set these in `` and start with an r
+
+example:
+
+Instead of writing manually 2 + 2 = 4  
+you could write 2 + 2 = `r 2+2`
+
+
+# enter in-line Latex code
+you can also enter in-line Latex code, when for example planning to enter special characters
+
+examples:  
+alpha: $\alpha$  
+beta: $\beta$  
+phi: $\phi$  
+
+using mouse over, you can have an immediate look if your Latex code is correct
+
+like that you can also enter in-line equations
+
+an example would be $y = x^2$
+
+
+# enter equations in seperate lines
+you also also enter Latex based equations in separate lines  
+to do that, you need to use two $. You will also get an immediate preview of your equation
+ 
+$$ k_{OW} = log \left( \frac{c_{1-octanol}}{c_{water}} \right)   $$
+
+
+# Some other options
+
+Enter dates:  
+`r format(Sys.time(), "%d.%m.%Y")`
+
+Enter information about your dataframe:  
+`r nrow(mtcars)`  
+`r ncol(mtcars)`
+
+
+# Options for code chunks
+
+To see what the different options are doing, we are using the example dataframe mtcars
+
+You can (you don't need to) give chunks a name, to correctly identify the respective code chunks   
+Double chunk names, however, are prohibited.  
+
+## hiding code 
+```{r chunk_hide_code, echo = FALSE}
+cor.test(mtcars$mpg, mtcars$drat)
+
+cor.test(mtcars$am, mtcars$gear)
+```
+
+## hiding result
+```{r chunk_hide_result, echo = TRUE, results='hide'}
+cor.test(mtcars$cyl, mtcars$hp)
+```
+
+
+## display all results at the end of a chunk
+```{r chunk_result_end, results = 'hold'}
+cor.test(mtcars$drat, mtcars$carb)
+
+cor.test(mtcars$vs, mtcars$wt)
+
+cor.test(mtcars$qsec, mtcars$disp)
+```
+
+
+## hiding messages
+Here message is displayed
+```{r chunk_show_messages, message = TRUE}
+library(dplyr)
+```
+
+
+now we detach the package
+```{r}
+detach("package:dplyr", unload=TRUE)
+```
+
+and load it again, this time without message, but with warning
+```{r chunk_hide_messages, message = FALSE}
+library(dplyr)
+```
+
+now without message + warning
+```{r chunk_hide_messages_warnings, message = FALSE, warning = FALSE}
+detach("package:dplyr", unload=TRUE)
+library(dplyr)
+```
+
+
+# Add figures
+```{r figure}
+plot(mtcars$mpg, mtcars$drat)
+```
+
