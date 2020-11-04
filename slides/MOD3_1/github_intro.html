@@ -3,11 +3,11 @@
   <head>
     <title>Introduction to Git &amp; GitHub</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Abdreas Scharmüller, Ralf B. Schäfer" />
-    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-    <script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+    <meta name="author" content="Andreas Scharmüller, Prof. Ralf B. Schäfer" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+    <script src="libs/anchor-sections/anchor-sections.js"></script>
   </head>
   <body>
     <textarea id="source">
@@ -15,27 +15,57 @@ class: center, middle, inverse, title-slide
 
 # Introduction to Git &amp; GitHub
 ## Terminal, RStudio
-### Abdreas Scharmüller, Ralf B. Schäfer
+### Andreas Scharmüller, Prof. Ralf B. Schäfer
 ### AG Landscape Ecology
-### 2016/12/12 (updated: 2020-10-28)
+### 2020/10/29 (updated: 2020-11-03)
 
 ---
 
 
-## Create a GitHub account
 
-- modern software development
-- Git is software
-- GitHub is platform
+
+## Why Git?
+
+.pull-left[
+
+- Modern software development
+  - most R-packages
+- Version control
+- Git is the __software__
+- GitHub is the __platform__
+]
+
+.pull-right[
+
+&lt;img src="figures/git_hub.jpeg" style="background-image"&gt;
+]
 
 #### Other Plattforms
-- GitLab
-- BitBucket
+- GitLab: &lt;https://about.gitlab.com&gt;
+- BitBucket: &lt;https://bitbucket.org&gt;
+
+---
+## Create a GitHub account
+
+&lt;img src="figures/github_account.png" style="width: 70%"&gt;
+
+---
+## Create (initialize) repository
+
+#### Locally
+
+```sh
+git init
+```
+
+#### Remote
+
+&lt;img src="figures/github0_repo.png" style="width: 80%"&gt;
 
 ---
 ## Fork a repository
 
-- Fork from someone to your GtiHub account
+- Fork someone's repo to your GitHub account
 
 ![github1](figures/github1_fork.png)
 
@@ -48,9 +78,10 @@ class: center, middle, inverse, title-slide
 ---
 ## Clone a repository
 
-`cd Projects`
-
-`git clone git@github.com:njuvigny/MOD3.git`
+```sh
+cd Projects
+git clone git@github.com:njuvigny/MOD3.git
+```
 
 ![github3](figures/github3_clone.png)
 
@@ -59,55 +90,129 @@ class: center, middle, inverse, title-slide
 
 - Make changes to the `.txt`, `.R`, `.python` or to whatever file
 
+&lt;img src="figures/github4_local_cahnges.gif" style="width:60%;"&gt;
 
-![github4](figures/github4_local_cahnges.gif){#id .class height=3px}
 ---
 ## Stage your changes
 
-`git add file.txt`
-
-`git add -A`
-
+```sh
+git add file.txt
+git add *.txt
+git add -A
+```
 ![github5](figures/github5_stage_changes.png)
 ---
 ## Commit changes
 
-`git commit -m 'message here'`
+```sh
+git commit -m 'test'
+```
 
 ![github6](figures/github6_commit_changes.png)
 ---
 ## Push to your repo (origin)
 
-`git push origin master`
-
-`git push origin main`
+```sh
+git push origin master
+git push origin main
+```
 
 ![github7](figures/github7_push.png)
+---
+## Pull Request
+
+#### From your main branch to the remote main branch
+
+![github9](figures/github9_pr_master.png)
 
 ---
-## Switch branch
+class: center, inverse, middle
+# Branches
 
-`git checkout -b dev_scharmueller`
+&lt;img src="figures/git_branch.jpg" style="width:40%;"&gt;
 
-`git chekcout main`
+
+---
+## Branch
+
+#### Create/Switch Branch
+
+```sh
+git checkout -b dev_scharmueller
+git checkout main
+git status
+git branch
+```
 
 ![github8](figures/github8_branch.png)
 
 ---
-## Pull-Request to original repo (remote)
+## Branch
 
-![github9](figures/github9_pr.png)
+#### Merge Branch
+
+```sh
+git checkout master
+git merge dev_scharmueller
+```
+
+---
+## Pull Request
+
+#### From your dev_XXX branch to a new remote dev_XXX branch
+
+![github9](figures/github9_pr_dev.png)
+---
+## Branch
+
+First 8 commits of my R-package repo &lt;andschar/dbreport&gt;
+
+```sh
+git log --all --decorate --oneline --graph
+```
+
+&lt;img src="figures/github9_adog.png" style="width:100%;"&gt;
+
+---
+class: center, inverse, middle
+
+&lt;img src="figures/git_simply.jpeg"&gt;
 
 ---
 ## Task
 
-- Fork Noel's repo
+- Fork Noel's repo: &lt;https://github.com/njuvigny/MOD3&gt;
 - Clone it to local machine
 - Create a new branch named dev_YOURSURNAME
 - Change the file XXX
 - Commit the change (+ commit message) (in the new branch!)
 - Push local changes to your repo
 - Create a Pull Request against Noel's repo
+
+---
+## Material
+
+- OpenOlat
+- StackOverflow
+- YouTube
+- &lt;https://guides.github.com/activities/hello-world&gt;
+- &lt;https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN&gt;
+
+### Made with
+- &lt;https://github.com/rstudio/rmarkdown&gt;
+- &lt;https://github.com/yihui/knitr&gt;
+- &lt;https://github.com/yihui/xaringan&gt;
+
+---
+## Other things
+
+- &lt;https://github.com/rstudio/blogdown&gt;
+- &lt;https://github.com/r-lib/pkgdown&gt;
+
+---
+class: center, middle, inverse
+
+# Thank you for your attention!
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
