@@ -1,8 +1,8 @@
 Slides  of the different lectures
 
 Lecture 1: 5/11/20\
-[Introduction to LaTeX](https://github.com/njuvigny/MOD3/blob/main/slides/latex_slides.pdf)
-[Introduction to shell](https://github.com/njuvigny/MOD3/blob/main/slides/Shell.pdf)
+[Introduction to LaTeX](https://github.com/njuvigny/MOD3/blob/main/slides/latex_slides.pdf)</br>
+[Introduction to shell](https://github.com/njuvigny/MOD3/blob/main/slides/Shell.pdf)</br>
   
 Lecture 2: 12/11/20
 
