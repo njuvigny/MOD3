@@ -16,16 +16,16 @@ editor_options:
 ---
 
 ```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(dpi=300,fig.width=7)
 ```
 
 ## Why Git?
 
 .pull-left[
 
+- Version control software
 - Modern software development
   - most R-packages
-- Version control
 - Git is the __software__
 - GitHub is the __platform__
 ]
@@ -38,6 +38,29 @@ options(htmltools.dir.version = FALSE)
 #### Other Plattforms
 - GitLab: <https://about.gitlab.com>
 - BitBucket: <https://bitbucket.org>
+
+---
+## Install Git
+
+<https://github.com/git-guides/install-git>
+
+#### On Linux
+
+```sh
+sudo apt update
+sudo apt install git-all
+```
+
+#### On windows
+
+Download manually
+
+## Start Git
+
+```sh
+cd my_directory
+git init
+```
 
 ---
 ## Create a GitHub account
@@ -58,6 +81,12 @@ git init
 <img src="figures/github0_repo.png" style="width: 80%">
 
 ---
+## Create (initialize) repository
+
+<img src="figures/github0_repo2.png" style="width: 70%">
+
+
+---
 ## Fork a repository
 
 - Fork someone's repo to your GitHub account
@@ -73,18 +102,40 @@ git init
 ---
 ## Clone a repository
 
+#### Command line
+
 ```sh
 cd Projects
-git clone git@github.com:njuvigny/MOD3.git
-git clone https://github.com/njuvigny/MOD3.git
+git clone git@github.com:njuvigny/MOD3.git # SSH
+git clone https://github.com/njuvigny/MOD3.git # HTTPS
 ```
+
+#### RStudio
+
+<img src="figures/github3_clone2.png" style="width:50%;">
+
+---
+## RStudio
 
 ![github3](figures/github3_clone.png)
 
 ---
+## RStudio
+
+![github3](figures/github3_clone3.png)
+
+---
+class: center, inverse, middle
+## First repository!!
+
+<img src="figures/git_repo_hooray.jpg" style="width:40%">
+
+
+---
+class: inverse, center, middle
 ## Local changes
 
-- Make changes to the `.txt`, `.R`, `.python` or to whatever file
+Make changes to the `.txt`, `.R`, `.python` or to whatever file...
 
 <img src="figures/github4_local_cahnges.gif" style="width:60%;">
 
@@ -101,7 +152,7 @@ git add -A
 ## Commit changes
 
 ```sh
-git commit -m 'test'
+git commit -m 'Patch-1'
 ```
 
 ![github6](figures/github6_commit_changes.png)
@@ -120,6 +171,22 @@ git push origin main
 #### From your main branch to the remote main branch
 
 ![github9](figures/github9_pr_master.png)
+
+---
+## Git/Github Workflow
+
+1. Create or Fork a repo
+
+2. Clone the repo to local machine
+
+3. Local changes
+
+4. Stage (i.e. add) & Comit changes to Git tree
+
+5. Push to origin
+
+6. Create a Pull-Request against the remote repository
+
 
 ---
 class: center, inverse, middle
@@ -153,15 +220,11 @@ git merge dev_scharmueller
 ```
 
 ---
-## Pull Request
-
-#### From your dev_XXX branch to a new remote dev_XXX branch
-
-![github9](figures/github9_pr_dev.png)
----
 ## Branch
 
-First 8 commits of my R-package repo <andschar/dbreport>
+#### Merge example
+
+First 8 commits of my R-package repo: __andschar/dbreport__
 
 ```sh
 git log --all --decorate --oneline --graph
@@ -169,22 +232,19 @@ git log --all --decorate --oneline --graph
 
 <img src="figures/github9_adog.png" style="width:100%;">
 
+
+---
+## Branch
+
+#### Pull Request
+
+From your dev_XXX branch to a new remote dev_XXX branch
+
+![github9](figures/github9_pr_dev.png)
 ---
 class: center, inverse, middle
 
 <img src="figures/git_simply.jpeg">
-
----
-## Task
-
-- Fork Noel's repo: <https://github.com/njuvigny/MOD3>
-- Clone it to local machine
-- Create a new branch named dev_YOURSURNAME
-- Change the file __git_intro/task.Rmd__ according to the steps described in said file
-- Create a .html out of the .Rmd file
-- Add & Commit both files in the new branch
-- Push local changes to your repo
-- Create a Pull Request against Noel's repo
 
 ---
 ## Material
@@ -201,10 +261,17 @@ class: center, inverse, middle
 - <https://github.com/yihui/xaringan>
 
 ---
-## Other things
+## Task
 
-- <https://github.com/rstudio/blogdown>
-- <https://github.com/r-lib/pkgdown>
+- Fork Noel's repo: <https://github.com/njuvigny/MOD3>
+- Clone it to local machine
+- Create a new branch named dev_YOURSURNAME
+- Change the file __git_intro/task.Rmd__ according to the steps described in said file
+- Create a .html out of the .Rmd file
+- Add & Commit both files in the new branch
+- Push local changes to your repo (HINT: this might cause some trouble ;))
+- Create a Pull Request against Noel's repo
+
 
 ---
 class: center, middle, inverse
