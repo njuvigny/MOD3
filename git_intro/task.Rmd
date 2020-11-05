@@ -22,10 +22,10 @@ HINT: If this wasn't covered in the course, just google it ;)
 
 ## Formula
 
-4. Here, add a formula which calculates the Toxic Unit of a concentration (c) and and
-LC50 value.
+4. Here, add a formula which calculates the Toxic Unit of a concentration (ci) and and
+EC50 value together with the corresponding text (see Markdown slides).
 
 ## Other
 
 5. Add a table of contents to the document.
-6. Add a link pointing to the university Landau's website here.
+6. Add a link pointing to the GitHub repository of the course here.
