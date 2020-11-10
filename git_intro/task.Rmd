@@ -1,18 +1,45 @@
 ---
 title: "Task"
-output: html_document
-editor_options: 
+author: "A. Lena Bauer"
+date: "`r format(Sys.time(), '%d. %B %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: true
+      smooth_scroll: false
+    toc_depth: 2
+editor_options:
   chunk_output_type: console
 ---
 
+## required packages
+```{r load packages}
+library(ggplot2)
+```
 ## YAML header
 
 1. Add your full name and date to the RMarkdown document in the YAML header
 
-## Plot
+<mark>done easily</mark>
+
+## Plot the famous *Iris* data
 
 2. Here, add a scatter plot of the iris data set depicting Sepal.Length and Sepal.Width
 variables and print the figure and the code snippet.
+
+<mark> how to make *iris* appear in italic in the title?<mark>
+
+
+```{r scatterplot-sepal.lenght~sepal.width}
+ggplot(iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
+geom_point()+
+  ggtitle("Sepal size of three *Iris* species") +
+labs(
+x="Length [cm]",
+y="Width [cm]")
+```
+
 
 ## Image
 
@@ -20,12 +47,41 @@ variables and print the figure and the code snippet.
 
 HINT: If this wasn't covered in the course, just google it ;)
 
+<mark> using the url from github, no picture was added correctly. Maybe, because you need a permission (login), although i was logged in. So, i inserted another picture for the first step. The idea comes from: <https://stackoverflow.com/questions/28912868/how-to-insert-image-from-url-in-markdown><mark>
+
+```{r, echo=FALSE}
+# Define variable containing url
+url <- "https://www.online-image-editor.com/styles/2014/images/example_image.png"
+```
+![another cat](`r url`)
+
+<mark> so here the meme downloaded to my hard drive and inserted afterwards <mark>
+
+![another meme](markdown_meme.jpg)
+
+
+
+
 ## Formula
 
 4. Here, add a formula which calculates the Toxic Unit of a concentration (ci) and and
 EC50 value together with the corresponding text (see Markdown slides).
 
+$$ sumTU = log10 \left(\sum_{i=1}^n \frac{c_i}{EC_{50_i}} \right) $$
+
+where $$ c_i $$  is the concentration of the pesticide *i* and $$ EC_{50_i}$$ is the concentration of pesticide $$i$$ at which 50 % of the test organisms (*Daphnia magna*) were affected.
+
+<mark> would had been so nice, but this looks ugly.. ok, lets do it like this </mark>
+
+where *c<sub>i</sub>* is the concentration of the pesticide *i* and EC<sub>*50i*</sub> is the
+concentration of pesticide *i* at which 50% of the test organisms
+(*Daphnia magna*) were affected.
+
 ## Other
 
 5. Add a table of contents to the document.
+<mark>done easily</mark>
+
 6. Add a link pointing to the GitHub repository of the course here.
+
+<mark> If you want to know more, don't klick [here](https://olat.vcrp.de/auth/RepositoryEntry/2835448345/CourseNode/102608021997477), because you already know this! <mark>
