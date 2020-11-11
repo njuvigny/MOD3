@@ -1,18 +1,48 @@
 ---
 title: "Task"
-output: html_document
-editor_options: 
+author: Victoria Sophie Stoll
+date: 09.11.2020
+output:
+  html_document:
+    number_sections: yes
+    toc: yes
+    toc_depth: '2'
+    toc_float: true
+  pdf_document:
+    number_sections: yes
+    toc: yes
+    toc_depth: '2'
+editor_options:
   chunk_output_type: console
 ---
-
+  
+# Git tutorial
+  
 ## YAML header
-
-1. Add your full name and date to the RMarkdown document in the YAML header
+  
+  1. Add your full name and date to the RMarkdown document in the YAML header
 
 ## Plot
 
 2. Here, add a scatter plot of the iris data set depicting Sepal.Length and Sepal.Width
 variables and print the figure and the code snippet.
+
+
+```{r iris}
+
+#data set
+head(iris)
+
+#assign variables
+Sepal.Length<-iris[1:150,1]
+Sepal.Width<-iris[1:150,2]
+
+#create scatter plot
+plot(Sepal.Length, Sepal.Width, xlab="sepal length", ylab="sepal width", pch=19)
+
+```
+
+
 
 ## Image
 
@@ -20,12 +50,20 @@ variables and print the figure and the code snippet.
 
 HINT: If this wasn't covered in the course, just google it ;)
 
+![Markdown meme](C:/Users/Sophie/Desktop/GitHub/MOD3/git_intro/markdown_meme.jpg)
+
+
 ## Formula
 
 4. Here, add a formula which calculates the Toxic Unit of a concentration (ci) and and
 EC50 value together with the corresponding text (see Markdown slides).
 
+$$ sumTU=log_{10}\bigg(\sum\nolimits_{i=1}^n\bigg(\frac{c_{i}}{EC_{50_i}}\bigg)\bigg) $$
+where $c_{i}$ is the concentration of the pesticide $i$ and $EC_{50_i}$ is the concentration of pesticide $i$ at which 50 % of the test organisms (_Daphnia magna_) were affected.
+
+
 ## Other
 
 5. Add a table of contents to the document.
-6. Add a link pointing to the GitHub repository of the course here.
+6. Add a [link](https://github.com/njuvigny/MOD3) pointing to the GitHub repository of the course here.
+<https://github.com/njuvigny/MOD3>
