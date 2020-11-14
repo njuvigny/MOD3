@@ -1,1 +1,3 @@
 i created this file by putting it into the git_intro folder on my PC. This folder is the local copy of the MOD3_repo.
+
+i made some changes here (in RStudio)
