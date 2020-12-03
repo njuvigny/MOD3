@@ -1,3 +1,6 @@
 i created this file by putting it into the git_intro folder on my PC. This folder is the local copy of the MOD3_repo.
 
 i made some changes here (in RStudio)
+
+
+after changing the projekt (a have 4 in RStudio... next to x in the upper right edge) i made some chnges here nd try to commit in der hoffnung that i will be able not only to commit, sondern auch tu push
