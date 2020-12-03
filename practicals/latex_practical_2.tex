@@ -14,12 +14,12 @@
 \title{My introduction to LaTeX}
 % this package enables us to create affiliations for the authors
 \usepackage{authblk}
-\author[1]{John}
-\author[2]{Mike}
-\affil[1]{Department 1, University 1}
-\affil[2]{Department 2, University 2}
+\author[1]{Anna}
+\author[2]{Lena}
+\affil[1]{Institue for Plant Protection in Fruit Crops , Julius Kühn Institute}
+\affil[2]{Institute for Plant Protection in Viticulture, JKI}
 
-\date{Date of submission (or last edit)}
+\date{11.11.2020}
 
 \usepackage[utf8]{inputenc} % enables to enter accent for Mac and Linux users
 % \usepackage[latin1]{inputenc} on Windows
@@ -28,7 +28,7 @@
 \usepackage{helvet}
 \usepackage{microtype}
 \usepackage {graphicx}
-\graphicspath{ {images/} } % define the path of where the images are stored
+\graphicspath{ {LaTeX_images/} } % define the path of where the images are stored
 
 % let's add some new package for extra features
 
@@ -68,7 +68,7 @@
 
 % package Biblatex to manage bibliography
 %\usepackage[backend=bibtex, style=authoryear, sorting=nyt]{biblatex} % the style of the reference can be easily adjusted using the optional arguments. Note that an other common backend with biblatex is biber. but you need to use pdflatexmk
-%\addbibresource{/Users/Noel/Documents/latex/library.bib} % this line is to give the path of the database
+%\addbibresource{/Users/Noel/Documents/Stat with Noel//all LaTeX files from BAUER/library.bib} % this line is to give the path of the database
 
 % package to cite using bibtex instead of biblatex
 \usepackage{cite}
@@ -87,7 +87,7 @@
 We have now created our first little LaTeX document.
 \end{abstract}
 \par % this is an other way to start a new paragraph 
-\textbf{\underline{\textit{Keywords:}}} keyword 1, keyword 2, keyword 3 % see how you can modify the appearance of words in the text
+\textbf{\underline{\textit{Keywords:}}} D. suzukii, GreenGel-Technology, Spinosad % see how you can modify the appearance of words in the text
 % by nesting command line.
 \pagebreak 
 
@@ -152,33 +152,33 @@ You can find a list of how to insert the other characters easily on Internet.
 We now insert a picture: % we can see here that the double slash insert a line spacing.
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=8cm]{chongqing2019.jpg} % there is no need to adjust the height as this is done automatically.
+\includegraphics[width=8cm]{image0009.jpg} % there is no need to adjust the height as this is done automatically.
 \end{figure}
 \newpage % sometimes you need to move some text or content to the next page for clarity. Try to remove that line and see what happens.
 
 And we can add a caption:
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=8cm]{chongqing2019.jpg} 
-\caption{Chongqing 2019. $\copyright$\textit{Juvigny-Khenafou}}
+\includegraphics[width=8cm]{image0023.jpg} 
+\caption{pupa in a berry $\copyright$\textit{JKI}}
 \label{picture1} % it is sometimes interesting to also add a label to the figure that way it can be easily referred to at later staged when writing.
 \end{figure}
 
 We can also play with the positioning of the figure:
 % to the left
 \begin{figure}[ht!]
-\includegraphics[width=8cm]{chongqing2019.jpg} % notice how the \centering is removed here to assume the default positioning
+\includegraphics[width=8cm]{V2a_m_0.jpg} % notice how the \centering is removed here to assume the default positioning
 \captionsetup{justification=raggedright, singlelinecheck = false} % we can use the \captionsetup command within an environemnent to modify specific caption without affecting the other figures.
-\caption{Chongqing 2019. $\copyright$\textit{Juvigny-Khenafou}}
+\caption{grapes in the climatic chamber $\copyright$\textit{JKI}}
 \label{picture2}
 \end{figure}
 \par
 
 % to the right
 \begin{figure}[ht!]
-\includegraphics[width=8cm, right]{chongqing2019.jpg} % notice how the centering is removed here to assume the default positioning
+\includegraphics[width=8cm, right]{IMG0008.JPG} % notice how the centering is removed here to assume the default positioning
 \captionsetup{justification=raggedleft, singlelinecheck = false} 
-\caption{Chongqing 2019. $\copyright$\textit{Juvigny-Khenafou}}
+\caption{rearing cage. $\copyright$\textit{JKI}}
 \label{picture3} 
 \end{figure}
 \newpage
@@ -190,18 +190,18 @@ Or we can add multiple pictures together:
 
 	\begin{subfigure}{0.5\textwidth}
 	\centering
-	\includegraphics[width=0.9\linewidth, height=5cm]{chongqing2019.jpg} 
-	\caption{Chongqing 2019}
+	\includegraphics[width=0.9\linewidth, height=5cm]{IMG0009.JPG} 
+	\caption{larval development of D. suzukii }
 	\label{fig:subim1}
 	\end{subfigure}
 	\begin{subfigure}{0.5\textwidth}
 	\centering
-	\includegraphics[width=0.9\linewidth, height=5cm, angle=270]{beijing2018.jpg}
-	\caption{Beijing 2018}
+	\includegraphics[width=0.9\linewidth, height=5cm, angle=270]{image0009.jpg}
+	\caption{male D. suzukii}
 	\label{fig:subim2}
 	\end{subfigure}
 
-\caption{Chongqing \& Beijing $\copyright$\textit{Juvigny-Khenafou}}
+\caption{these larvae become such adult flies $\copyright$\textit{JKI}}
 \label{picture4}
 \end{figure}
 \par
@@ -246,7 +246,8 @@ The final point that we want to touch in this practical is the referencing. Befo
 We can also cite using bibtex instead of biblatex. For example: \cite{Lawton1994}. 
 \par
 
-\bibliography{/Users/Noel/Documents/latex/library}{} % you need to add the path to your own library
+\bibliography{/Users/user/Documents/Stat_with_Noel/all_LaTeXfiles_BAUER/library.bib}{} % you need to add the path to your own library
+
 \bibliographystyle{plain}
 
 
